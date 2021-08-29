@@ -1,0 +1,101 @@
+
+@keyframes menuColors{
+    from {background-color: rgb(66,69,73);}
+    to   {background-color: rgb(30,33,36);}
+}
+
+body {
+    background-image: url("background.jpg");
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: rgb(40,43,48);
+    color:  black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    border-style: inset;
+    border-radius: 25px;
+    border-color: black;
+    animation-name: menuColors;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.center {
+    font-size: large;
+    background-color: rgb(66,69,73);
+    padding: 5px;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 15px;
+    border-style: solid;
+    width: max-content;
+}
+
+
+.draggableListItem, #doneTodo {
+    transition: all 0.5s;  
+    transition-timing-function: ease-in-out;
+    font-family: fantasy;
+    border-bottom: 1px solid black;
+    cursor: move;
+    user-select: none;
+}
+.draggableListItem:hover, #doneTodo:hover {
+    font-size: 25px;
+    color: rgb(174, 246, 58)
+}
+
+.inputSubmit, button, .spareSubmit, .todoInput, .spareInput {
+    font-size: 15;
+    font-family: sans-serif;
+    background-color: rgb(66,69,73);
+    border-style: inset;
+    border-width: 5px;
+    border-color: black;
+    transition: all 1s;
+}
+.todoInput, .spareInput {border-radius: 25px;}
+.inputSubmit, button, .spareSubmit{border-radius: 10px;} 
+input:hover, button:hover{background-color: rgb(40,43,48);}
+.input:hover::after, button:hover::after{background-color: grey;}
+
+.todoManage {
+    padding: 3px;
+    width: max-content;
+    color: whitesmoke;
+}
+.center, .todoManage {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(40,43,48);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 10;
+    top: -5px;
+    right: 105%;
+}
+.tooltip:hover .tooltiptext {visibility: visible;}
+
+#doneTodo {text-decoration:line-through;}
